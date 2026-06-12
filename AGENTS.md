@@ -45,30 +45,32 @@ Site pentru Hopa Țopa Land — loc de joacă și spațiu de petreceri pentru co
 - `BRIEF.md` — businessul, audiența, ce trebuie să facă siteul
 - `structura.md` — structura paginilor și a navigării
 - `STYLEGUIDE.md` — design system: paletă, tipografie, voice, componente
-- `indoor-styles.css` și `outdoor-styles.css` — token-uri CSS și componente concrete, câte unul pentru fiecare locație
+- `style.css` — token-uri CSS și toate componentele concrete ale site-ului
 
 Dacă faci o decizie nouă de design (paletă, componentă, layout), updatează `STYLEGUIDE.md` în aceeași modificare. Codul fără styleguide divergează rapid.
 
-## Structura site-ului — două locații
+## Structura site-ului
 
-Site-ul are **două locații separate**, fiecare cu propriul stil vizual:
+Acest repo conține o singură locație — Hopa Țopa Land (loc de joacă indoor în Colentina, București):
 
-- **Indoor** — Hopa Țopa Land (loc de joacă în Colentina, București). Pagini: `indoor.html` + ghidul de stil `indoor-style.html`, stil în `indoor-styles.css`.
-- **Outdoor** — Hopa în Grădină (grădină de evenimente în Mogoșoaia). Pagini: `outdoor.html` + ghidul de stil `outdoor-style.html`, stil în `outdoor-styles.css`.
+- `index.html` — pagina principală, single-page cu ancore (vezi `structura.md`).
+- `stylesheet.html` — ghidul de stil viu, generat din `style.css`.
+- `personaje.html` — pagina cu selecție de personaje pentru petreceri.
+- `style.css` — singurul fișier de stil al site-ului.
+- `poze/` — toate imaginile reale folosite în site.
 
-**`index.html` este DOAR o pagină de alegere** între cele două locații — două butoane, Indoor și Outdoor, centrate pe ecran. Nu pune conținut, oferte sau secțiuni noi în `index.html`. Tot ce ține de o locație merge în pagina ei (`indoor.html` sau `outdoor.html`).
-
-Fiecare locație își păstrează propriul stil: indoor folosește doar `indoor-styles.css`, outdoor doar `outdoor-styles.css`. Nu amesteca paletele între ele.
+Locația outdoor (Hopa în Grădină, Mogoșoaia) trăiește într-un alt repo. Nu recrea aici fișiere de tip `outdoor.html` / `outdoor-styles.css` și nu transforma `index.html` într-o pagină de alegere între locații.
 
 ## Reguli de design
 
 - **Mobile-first.** Scrie CSS pentru mobil, adaugă media queries pentru desktop. Nu invers.
-- **Tokens, nu valori hardcodate.** Toate culorile, font-size-urile, spacing-urile, radius-urile trec prin `var(--...)` din `:root` în `styles.css`. Dacă ai nevoie de o valoare nouă, adaug-o ca token, nu hardcoda.
+- **Tokens, nu valori hardcodate.** Toate culorile, font-size-urile, spacing-urile, radius-urile trec prin `var(--...)` din `:root` în `style.css`. Dacă ai nevoie de o valoare nouă, adaug-o ca token, nu hardcoda.
 - **Imagini lipsă** → slot colorat (`background: var(--color-…)`) cu o iconiță Lucide centrată ca placeholder. Nu inventa URL-uri și nu folosi stock photos.
+- **Imagini reale** → stau toate în `poze/`, la rădăcina proiectului, cu nume descriptive (ex: `gallery-site-01.jpg`). Când adaugi poze noi (de la proprietar, capturi etc.), pune-le direct în `poze/` și leagă-le din pagini cu `poze/nume-fisier.jpg`. Nu crea foldere noi de tip `_import`, `assets`, `images` etc. — un singur folder de imagini, care rămâne în repo.
 
 ## Când ți se cere ceva ce nu e în styleguide
 
-Dacă ți se cere să construiești ceva care **nu există în ghidul de stil** (o componentă nouă, o culoare nouă, un layout sau un efect care nu apare în `STYLEGUIDE.md` / `indoor-styles.css` / `outdoor-styles.css`):
+Dacă ți se cere să construiești ceva care **nu există în ghidul de stil** (o componentă nouă, o culoare nouă, un layout sau un efect care nu apare în `STYLEGUIDE.md` / `style.css`):
 
 - **Nu o construi pe tăcute.** Oprește-te și spune-i proprietarului că lucrul cerut nu face parte din stilul actual al site-ului.
 - **Întreabă-l dacă vrea să ne abatem de la stil** — și avertizează-l, prietenos, că riscul este ca site-ul să-și piardă din unitate și din aerul îngrijit, „dintr-o bucată", care îl face să arate de încredere. Pe scurt: ar putea începe să arate cârpit, în loc de pus la patru ace.
@@ -77,7 +79,8 @@ Dacă ți se cere să construiești ceva care **nu există în ghidul de stil** 
 
 ## Reguli de cod
 
-- Un singur fișier de stil per locație: `indoor-styles.css` și `outdoor-styles.css`. Nu spargem mai departe pe componente.
+- Un singur fișier de stil: `style.css`. Nu spargem mai departe pe componente.
+- **Niciun `<style>` în HTML.** Tot CSS-ul, inclusiv stilurile specifice unei singure pagini (ex: ghidul de stil), merge în `style.css` — scope-uit cu o clasă dacă e nevoie, nu pus inline în pagină.
 - JavaScript doar unde HTML/CSS nu rezolvă (ex: lightbox dacă alegem JS; scroll smooth e deja nativ).
 - HTML semantic: `<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`. Nu `<div>` peste tot.
 - Accesibilitate: `alt` pe imagini, contrast suficient, focus vizibil pe butoane și linkuri.
