@@ -687,7 +687,12 @@
         </div>
 
         <div class="contact-grid">
-          <form class="form" onsubmit="event.preventDefault(); alert('Mulțumim! Te contactăm în curând.');">
+          <form class="form" action="https://formsubmit.co/salut@hopatopaland.ro" method="POST" data-party-form>
+            <input type="hidden" name="_subject" value="Cerere nouă de petrecere - Hopa Țopa Land">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://hopatopaland.ro/index.html?formular=trimis#contact" data-form-next>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none;">
             <div class="form__row form__row--2">
               <div class="form__field">
                 <label class="form__label" for="nume">Nume și prenume</label>
@@ -728,6 +733,7 @@
               <span>Trimite cererea</span>
               <i data-lucide="send"></i>
             </button>
+            <p class="form__status" data-form-success hidden>Mulțumim! Cererea a fost trimisă. Te contactăm în curând.</p>
           </form>
 
           <div class="contact-info">
@@ -914,6 +920,24 @@
           eventCard.remove();
         }
       });
+    }
+
+    const partyForm = document.querySelector('[data-party-form]');
+    if (partyForm) {
+      const nextField = partyForm.querySelector('[data-form-next]');
+      const successMessage = partyForm.querySelector('[data-form-success]');
+      const currentUrl = new URL(window.location.href);
+
+      if (nextField) {
+        const redirectUrl = new URL(window.location.href);
+        redirectUrl.searchParams.set('formular', 'trimis');
+        redirectUrl.hash = 'contact';
+        nextField.value = redirectUrl.toString();
+      }
+
+      if (currentUrl.searchParams.get('formular') === 'trimis' && successMessage) {
+        successMessage.hidden = false;
+      }
     }
 
     const gallery = document.querySelector('[data-gallery-slider]');

@@ -1062,6 +1062,15 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 }
 .form__textarea { min-height: 120px; resize: vertical; }
 .form__hint { font-size: var(--text-xs); color: var(--ink-muted); }
+.form__status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
 
 /* Badge */
 .badge {
