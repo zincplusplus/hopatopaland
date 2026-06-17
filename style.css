@@ -187,10 +187,10 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   align-items: center;
   justify-content: space-between;
   min-height: var(--header-height);
-  padding: var(--space-3) 0;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
   gap: var(--space-4);
   flex-wrap: wrap;
-  min-width: 0;
 }
 .site-header__logo {
   display: flex;
@@ -215,11 +215,12 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 .site-nav {
   order: 3;
   width: 100%;
-  min-width: 0;
   display: flex;
+  align-items: center;
   gap: var(--space-2);
   overflow-x: auto;
-  padding-bottom: var(--space-1);
+  padding: 0.15rem 0 0.25rem;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .site-nav::-webkit-scrollbar { display: none; }
@@ -240,13 +241,19 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   background: var(--magenta-soft);
 }
 @media (min-width: 960px) {
+  .site-header__inner {
+    height: var(--header-height);
+    flex-wrap: nowrap;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .site-nav {
     order: initial;
     width: auto;
     align-items: center;
     gap: var(--space-6);
     overflow: visible;
-    padding-bottom: 0;
+    padding: 0;
   }
   .site-nav a {
     font-weight: 500;
@@ -265,6 +272,7 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: auto;
   min-width: 0;
 }
 .site-header__cta-stack {
@@ -345,14 +353,19 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 }
 @media (max-width: 640px) {
   .site-header__inner {
-    gap: var(--space-3);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
   }
   .site-header__actions {
-    order: 2;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--space-2);
+    justify-content: flex-start;
+    justify-self: start;
+    max-width: 100%;
+    margin-left: 0;
+    gap: 0.35rem;
+  }
+  .site-nav {
+    grid-column: 1 / -1;
+    min-width: 0;
   }
   .site-header__cta-stack {
     gap: var(--space-2);
