@@ -271,9 +271,14 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 .site-header__actions {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-3);
   margin-left: auto;
   min-width: 0;
+}
+.site-header__icons {
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 .site-header__actions .btn {
   height: 44px;
@@ -372,7 +377,7 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
     justify-self: end;
     max-width: 100%;
     margin-left: 0;
-    gap: var(--space-1);
+    gap: var(--space-3);
   }
   .site-nav {
     grid-column: 1 / -1;
@@ -1413,18 +1418,25 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-12) var(--space-2) var(--space-4);
-  position: relative;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
   min-height: 2.5rem;
   text-align: center;
 }
+.topbar__inner::before {
+  content: "";
+  flex: 0 0 32px;
+}
 .topbar__link {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 0;
   gap: var(--space-2);
   color: var(--garden-cream);
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 500;
   font-size: var(--text-sm);
   text-decoration: none;
 }
@@ -1435,20 +1447,21 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 .topbar__highlight {
   color: var(--garden-sun);
 }
+.topbar__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
 .topbar__link img {
   width: 26px;
   height: 26px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   object-fit: contain;
   flex: 0 0 auto;
   background: var(--paper);
 }
 .topbar__arrow, .topbar__arrow svg { width: 16px; height: 16px; flex: 0 0 auto; }
 .topbar__close {
-  position: absolute;
-  top: 50%;
-  right: var(--space-2);
-  transform: translateY(-50%);
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1466,8 +1479,14 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 .topbar__close i, .topbar__close svg { width: 18px; height: 18px; }
 @media (max-width: 640px) {
   .topbar__inner {
-    padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3);
     gap: var(--space-1);
+    justify-content: space-between;
+  }
+  .topbar__inner::before {
+    display: none;
+  }
+  .topbar__highlight {
+    display: block;
   }
   .topbar__link {
     font-size: 0.7rem;
@@ -1482,7 +1501,6 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
     display: none;
   }
   .topbar__close {
-    right: var(--space-1);
     width: 28px;
     height: 28px;
   }
