@@ -1381,8 +1381,8 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 }
 
 .topbar {
-  background: var(--green);
-  color: var(--paper);
+  background: var(--garden-green);
+  color: var(--garden-cream);
 }
 .topbar__inner {
   display: flex;
@@ -1398,15 +1398,18 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--paper);
+  color: var(--garden-cream);
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--text-sm);
   text-decoration: none;
 }
 .topbar__link:hover {
-  color: var(--paper);
+  color: var(--garden-cream);
   text-decoration: underline;
+}
+.topbar__highlight {
+  color: var(--garden-sun);
 }
 .topbar__link img {
   width: 26px;
@@ -1430,7 +1433,7 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   border: none;
   border-radius: var(--radius-pill);
   background: transparent;
-  color: var(--paper);
+  color: var(--garden-cream);
   cursor: pointer;
 }
 .topbar__close:hover {
