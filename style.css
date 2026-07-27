@@ -1528,8 +1528,8 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 
 .pool-popup__panel {
   position: relative;
-  width: min(980px, 94vw);
-  max-height: min(86vh, 760px);
+  width: min(860px, calc(100vw - 64px));
+  max-height: calc(100svh - 72px);
   overflow: hidden;
   border-radius: 8px;
   background: white;
@@ -1539,7 +1539,7 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 .pool-popup__panel img {
   display: block;
   width: 100%;
-  max-height: min(86vh, 760px);
+  max-height: calc(100svh - 72px);
   object-fit: contain;
   background: white;
 }
@@ -1577,7 +1577,8 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   }
 
   .pool-popup__panel {
-    width: 96vw;
+    width: min(96vw, 860px);
+    max-height: calc(100svh - 24px);
   }
 
   .pool-popup__close {
