@@ -13,6 +13,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-PW478QL22W');
+    document.addEventListener('click', function (event) {
+      var whatsappLink = event.target.closest('a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/"], a[href^="https://web.whatsapp.com/"], a[href^="whatsapp://"]');
+      if (whatsappLink) gtag('event', 'whatsapp_click');
+    });
   </script>
   <title>Loc de joacă indoor în București | Petreceri copii Hopa Țopa Land</title>
   <meta name="description" content="Loc de joacă indoor în București, pe Șos. Colentina 60A. Petreceri copii în exclusivitate, animatori, pachete aniversare și oferte pentru școli.">

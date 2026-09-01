@@ -8,6 +8,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-PW478QL22W');
+    document.addEventListener('click', function (event) {
+      var whatsappLink = event.target.closest('a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/"], a[href^="https://web.whatsapp.com/"], a[href^="whatsapp://"]');
+      if (whatsappLink) gtag('event', 'whatsapp_click');
+    });
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
