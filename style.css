@@ -71,6 +71,7 @@
   /* Layout */
   --max-width: 1180px;
   --header-height: 72px;
+  --promotion-bar-height: 36px;
 }
 
 /* Reset */
@@ -78,10 +79,10 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: calc(var(--header-height) + var(--promotion-bar-height));
 }
 @media (max-width: 959px) {
-  html { scroll-padding-top: calc(var(--header-height) + var(--space-12)); }
+  html { scroll-padding-top: calc(var(--header-height) + var(--space-12) + var(--promotion-bar-height)); }
 }
 
 body {
@@ -181,6 +182,20 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+}
+.promotion-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--promotion-bar-height);
+  padding: var(--space-2) var(--space-3);
+  background: var(--magenta);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
 }
 .site-header__inner {
   display: flex;
@@ -1519,4 +1534,53 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
     height: 28px;
   }
   .topbar__close i, .topbar__close svg { width: 16px; height: 16px; }
+}
+
+/* Promotion popup */
+.promotion-popup {
+  width: min(420px, calc(100% - var(--space-6)));
+  max-height: calc(100dvh - var(--space-6));
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+.promotion-popup::backdrop {
+  background: rgba(46, 26, 42, 0.72);
+}
+.promotion-popup__image {
+  width: 100%;
+  max-height: calc(100dvh - var(--space-6));
+  object-fit: contain;
+}
+.promotion-popup__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+}
+.promotion-popup__close:hover {
+  color: var(--magenta-dark);
+}
+.promotion-popup__close:focus-visible {
+  outline: 3px solid var(--magenta);
+  outline-offset: 3px;
+}
+.promotion-popup__close i,
+.promotion-popup__close svg {
+  width: 22px;
+  height: 22px;
 }

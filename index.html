@@ -131,6 +131,9 @@
         </div>
       </div>
     </div>
+    <div class="promotion-bar" role="note">
+      <span>🎉 -15% pentru petrecerile organizate Luni-Vineri</span>
+    </div>
   </header>
 
   <main>
@@ -903,9 +906,27 @@
     </div>
   </footer>
 
+  <dialog class="promotion-popup" data-promotion-popup aria-label="Ofertă de 15% pentru petrecerile organizate de luni până vineri">
+    <button class="promotion-popup__close" type="button" data-promotion-popup-close aria-label="Închide oferta">
+      <i data-lucide="x"></i>
+    </button>
+    <img class="promotion-popup__image" src="poze/popup-reducere-petreceri-luni-vineri.jpeg" alt="Reducere de 15% pentru petrecerile organizate de luni până vineri la Hopa Țopa Land">
+  </dialog>
+
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script>
     lucide.createIcons();
+
+    (function () {
+      const promotionPopup = document.querySelector('[data-promotion-popup]');
+      if (!promotionPopup) return;
+
+      promotionPopup.showModal();
+      promotionPopup.querySelector('[data-promotion-popup-close]').addEventListener('click', () => promotionPopup.close());
+      promotionPopup.addEventListener('click', (event) => {
+        if (event.target === promotionPopup) promotionPopup.close();
+      });
+    })();
 
     (function () {
       const topbar = document.querySelector('[data-topbar]');
