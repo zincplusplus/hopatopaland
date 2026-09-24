@@ -89,7 +89,7 @@ Le folosim via CDN (`unpkg.com/lucide@latest`), inițializate cu o singură lini
 
 Lucide se potrivește perfect cu brandul: stroke-based, rotunjit, prietenos, neutru cromatic (preia `currentColor`).
 
-Iconițe pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `calendar`, `wifi`, `car-front`, `snowflake`, `shield-check`, `sparkles`, `images`, `cake`, `chef-hat`, `gift`, `party-popper`, `school`, `leaf`, `plus-circle`, `check`, `chevron-left`, `chevron-right`, `menu`, `x`.
+Iconițe pe care le folosim acum: `phone`, `instagram`, `facebook`, `mail`, `map-pin`, `clock`, `calendar`, `wifi`, `car-front`, `snowflake`, `shield-check`, `sparkles`, `images`, `cake`, `chef-hat`, `gift`, `party-popper`, `school`, `leaf`, `plus-circle`, `check`, `chevron-left`, `chevron-right`, `menu`, `x`.
 
 ## Voice
 
@@ -117,7 +117,7 @@ Iconițe pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `calendar
 
 Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul ei.
 
-- **Header plutitor** — logo + nav + telefon + CTA. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
+- **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
 - **Hero** — titlu + lead + CTA + image slot pe dreapta. Pe mobil, totul stacked, image slot sub. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară.
 - **Buton Hopa în Grădină peste hero** — mică invitație poziționată în dreapta sus peste fotografia de start din indoor, cu verdele și galbenul locației outdoor, pentru trimitere rapidă spre pagina Mogoșoaia.
 - **Colaj foto** — patru fotografii mai mici, ușor suprapuse, cu margine albă și umbră, folosite pentru a arăta clar spațiul, părinții, joaca și activitățile.
