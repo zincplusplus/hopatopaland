@@ -872,6 +872,14 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   letter-spacing: 0.06em;
 }
 .package__name { font-size: var(--text-xl); margin-bottom: var(--space-2); }
+.package__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+.package__image--portrait { object-position: center 58%; }
 .package__desc { color: var(--ink-soft); font-size: var(--text-sm); margin-bottom: var(--space-4); }
 .package__price {
   font-family: var(--font-display);

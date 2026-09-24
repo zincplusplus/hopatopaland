@@ -126,7 +126,7 @@ Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul e
 - **Listă ofertă școli/grădinițe** — rânduri compacte, unul sub altul, cu iconiță mică, numele categoriei și buton discret; detaliile rămân doar în pop-up.
 - **Galerie slideshow** — carusel foto mai compact, cu controale stânga/dreapta și puncte de navigare, folosit pentru mixuri reprezentative de spațiu, activități și petreceri. Imaginile se văd întregi, fără tăieri importante.
 - **Review slideshow** — carusel text pentru opinia clienților, cu stele, text central și controale simple. Se folosește pentru mesaje scurte, ușor de citit, nu pentru paragrafe lungi.
-- **Card pachet** — featured cu border magenta, listă cu checkmarks verde, preț mare, CTA.
+- **Card pachet** — featured cu border magenta, fotografie compactă în format lat sub numele pachetului, listă cu checkmarks verde, preț mare, CTA.
 - **Banner extra opțiuni** — bandă compactă sub pachete, cu CTA către pop-upul de extra opțiuni.
 - **Dialog personaje** — pop-up centrat peste pagină, declanșat din pachetul Hopa, cu închidere pe `x` sau click pe fundal.
 - **Dialog teme** — pop-up centrat peste pagină, fundal alb, header crem, închidere cu iconița `x`, liste de teme în blocuri compacte cu imagine scurtă.
