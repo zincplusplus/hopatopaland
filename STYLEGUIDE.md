@@ -89,7 +89,9 @@ Le folosim via CDN (`unpkg.com/lucide@latest`), inițializate cu o singură lini
 
 Lucide se potrivește perfect cu brandul: stroke-based, rotunjit, prietenos, neutru cromatic (preia `currentColor`).
 
-Iconițe pe care le folosim acum: `phone`, `instagram`, `facebook`, `mail`, `map-pin`, `clock`, `calendar`, `wifi`, `car-front`, `snowflake`, `shield-check`, `sparkles`, `images`, `cake`, `chef-hat`, `gift`, `party-popper`, `school`, `leaf`, `plus-circle`, `check`, `chevron-left`, `chevron-right`, `menu`, `x`.
+Siglele WhatsApp, Instagram și Facebook sunt SVG inline, pentru afișare sigură și fidelă a brandurilor.
+
+Iconițe Lucide pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `calendar`, `wifi`, `car-front`, `snowflake`, `shield-check`, `sparkles`, `images`, `cake`, `chef-hat`, `gift`, `party-popper`, `school`, `leaf`, `plus-circle`, `check`, `chevron-left`, `chevron-right`, `menu`, `x`.
 
 ## Voice
 
