@@ -120,13 +120,13 @@ Iconițe Lucide pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `c
 Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul ei.
 
 - **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Sub navigare poate include o bară promoțională subțire, contrastantă, care rămâne vizibilă la scroll. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
-- **Hero** — titlu + lead + CTA + image slot pe dreapta. Pe mobil, totul stacked, image slot sub. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară.
+- **Hero** — titlu + lead + CTA + galerie foto compactă pe dreapta. Pe mobil, totul stacked, galeria sub text. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară.
 - **Buton Hopa în Grădină peste hero** — mică invitație poziționată în dreapta sus peste fotografia de start din indoor, cu verdele și galbenul locației outdoor, pentru trimitere rapidă spre pagina Mogoșoaia.
 - **Colaj foto** — patru fotografii mai mici, ușor suprapuse, cu margine albă și umbră, folosite pentru a arăta clar spațiul, părinții, joaca și activitățile.
 - **USP strip** — 4 iconițe + label + meta. 2 coloane pe mobil, 4 pe desktop.
 - **Card eveniment** — image slot, titlu, dată, descriere scurtă, buton. În indoor, cardurile au dată internă, sunt așezate automat cu cel mai recent primul și pe pagină apar doar ultimele 3.
 - **Listă ofertă școli/grădinițe** — rânduri compacte, unul sub altul, cu iconiță mică, numele categoriei și buton discret; detaliile rămân doar în pop-up.
-- **Galerie slideshow** — carusel foto mai compact, cu controale stânga/dreapta și puncte de navigare, folosit pentru mixuri reprezentative de spațiu, activități și petreceri. Imaginile se văd întregi, fără tăieri importante.
+- **Galerie slideshow** — carusel foto compact în hero, cu controale stânga/dreapta și indicator numeric, folosit pentru mixuri reprezentative de spațiu, activități și petreceri. Imaginile se văd întregi, fără tăieri importante.
 - **Review slideshow** — carusel text pentru opinia clienților, cu stele, text central și controale simple. Se folosește pentru mesaje scurte, ușor de citit, nu pentru paragrafe lungi.
 - **Card pachet** — featured cu border magenta, fotografie compactă în format lat sub numele pachetului, listă cu checkmarks verde, preț mare, CTA.
 - **Banner extra opțiuni** — bandă compactă sub pachete, cu CTA către pop-upul de extra opțiuni.
