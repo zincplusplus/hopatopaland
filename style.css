@@ -20,6 +20,8 @@
   --sun: #F5C648;
   --sun-soft: #FDEBC2;
   --sun-dark: #A77A1A;
+  --halloween-orange: #FF7A1A;
+  --halloween-black: #000000;
   --cream: #FFF8EE;
   --paper: #FFFFFF;
   --ink: #2E1A2A;
@@ -198,7 +200,15 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   text-align: center;
   text-decoration: none;
 }
-.promotion-bar:hover { color: var(--paper); }
+.promotion-bar:hover {
+  color: var(--paper);
+  text-decoration: none;
+}
+.promotion-bar--halloween {
+  background: var(--halloween-orange);
+  color: var(--halloween-black);
+}
+.promotion-bar--halloween:hover { color: var(--halloween-black); }
 .promotion-bar:focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: -3px;

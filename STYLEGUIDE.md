@@ -28,6 +28,8 @@ Trei culori de bază (derivate din siglă) + un crem ca pat + un negru cald pent
 | Token | Hex | Folosit pentru |
 |---|---|---|
 | `--sun` | `#F5C648` | Highlight de ofertă, "nou", "popular". Maximum un loc pe pagină. |
+| `--halloween-orange` | `#FF7A1A` | Fundal temporar pentru promovarea evenimentului de Halloween. |
+| `--halloween-black` | `#000000` | Text pe fundalul portocaliu al promovării de Halloween. |
 
 ### Image slots
 
@@ -119,7 +121,7 @@ Iconițe Lucide pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `c
 
 Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul ei.
 
-- **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Sub navigare poate include o bară promoțională subțire, contrastantă și apăsabilă, care rămâne vizibilă la scroll. Mesajul poate avea o variantă mai scurtă pe telefon. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
+- **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Sub navigare poate include o bară promoțională subțire, contrastantă și apăsabilă, care rămâne vizibilă la scroll. Campania de Halloween folosește temporar portocaliu cu text negru; oferta permanentă revine la magenta cu text alb. Mesajul poate avea o variantă mai scurtă pe telefon. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
 - **Hero** — titlu + lead + CTA + galerie foto compactă pe dreapta. Pe mobil, totul stacked, galeria sub text. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară. Campaniile temporare pot avea al doilea buton, în stil secundar, care dispare automat după încheierea campaniei.
 - **Buton Hopa în Grădină peste hero** — mică invitație poziționată în dreapta sus peste fotografia de start din indoor, cu verdele și galbenul locației outdoor, pentru trimitere rapidă spre pagina Mogoșoaia.
 - **Colaj foto** — patru fotografii mai mici, ușor suprapuse, cu margine albă și umbră, folosite pentru a arăta clar spațiul, părinții, joaca și activitățile.
