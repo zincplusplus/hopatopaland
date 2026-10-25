@@ -119,8 +119,8 @@ Iconițe Lucide pe care le folosim acum: `phone`, `mail`, `map-pin`, `clock`, `c
 
 Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul ei.
 
-- **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Sub navigare poate include o bară promoțională subțire, contrastantă, care rămâne vizibilă la scroll. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
-- **Hero** — titlu + lead + CTA + galerie foto compactă pe dreapta. Pe mobil, totul stacked, galeria sub text. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară.
+- **Header plutitor** — logo + nav + WhatsApp, telefon, Instagram, Facebook + CTA. Sub navigare poate include o bară promoțională subțire, contrastantă și apăsabilă, care rămâne vizibilă la scroll. Mesajul poate avea o variantă mai scurtă pe telefon. Pe telefon, meniul rămâne vizibil ca bară orizontală derulabilă sub logo și buton. Sticky, cu blur pe scroll.
+- **Hero** — titlu + lead + CTA + galerie foto compactă pe dreapta. Pe mobil, totul stacked, galeria sub text. CTA-ul principal din hero poate fi ușor mai vizibil decât restul butoanelor, cu contur și umbră mai clară. Campaniile temporare pot avea al doilea buton, în stil secundar, care dispare automat după încheierea campaniei.
 - **Buton Hopa în Grădină peste hero** — mică invitație poziționată în dreapta sus peste fotografia de start din indoor, cu verdele și galbenul locației outdoor, pentru trimitere rapidă spre pagina Mogoșoaia.
 - **Colaj foto** — patru fotografii mai mici, ușor suprapuse, cu margine albă și umbră, folosite pentru a arăta clar spațiul, părinții, joaca și activitățile.
 - **USP strip** — 4 iconițe + label + meta. 2 coloane pe mobil, 4 pe desktop.
@@ -134,7 +134,7 @@ Vezi [index.html](index.html) pentru fiecare componentă vizibilă, cu HTML-ul e
 - **Dialog teme** — pop-up centrat peste pagină, fundal alb, header crem, închidere cu iconița `x`, liste de teme în blocuri compacte cu imagine scurtă.
 - **Dialog extra opțiuni** — pop-up centrat peste pagină, organizat pe extra opțiuni copii și adulți.
 - **Dialog ofertă serbări** — pop-up centrat peste pagină, pe același model vizual ca dialogul de teme, cu oferta grupată pe copii, extra copii și adulți.
-- **Popup promoțional** — fotografie verticală afișată integral la intrarea pe site, pe fundal întunecat, cu închidere vizibilă și accesibilă.
+- **Popup promoțional** — fotografie verticală afișată integral la intrarea pe site, pe fundal întunecat, cu închidere vizibilă și accesibilă. Pentru campanii cu dată limită, revine automat la oferta permanentă după încheierea evenimentului.
 - **Formular contact** — vertical, label deasupra input-ului, focus magenta.
 - **Footer** — fundal ink, 3 coloane pe desktop.
 

@@ -196,6 +196,18 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
   font-weight: 600;
   line-height: 1.25;
   text-align: center;
+  text-decoration: none;
+}
+.promotion-bar:hover { color: var(--paper); }
+.promotion-bar:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: -3px;
+}
+.promotion-bar__mobile { display: none; }
+@media (max-width: 767px) {
+  .promotion-bar { font-size: var(--text-base); }
+  .promotion-bar__desktop { display: none; }
+  .promotion-bar__mobile { display: inline; }
 }
 .site-header__inner {
   display: flex;

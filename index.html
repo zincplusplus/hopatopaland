@@ -34,7 +34,7 @@
   <meta name="twitter:description" content="Loc de joacă indoor în Colentina pentru aniversări, petreceri tematice și activități pentru copii.">
   <meta name="twitter:image" content="https://hopatopaland.ro/poze/indoor-hero-playground.jpg">
   <meta name="theme-color" content="#E5478F">
-  <link rel="stylesheet" href="style.css?v=20261006">
+  <link rel="stylesheet" href="style.css?v=20261025">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,9 +131,10 @@
         </div>
       </div>
     </div>
-    <div class="promotion-bar" role="note">
-      <span>🎉 -15% pentru petrecerile organizate Luni-Vineri</span>
-    </div>
+    <a class="promotion-bar" href="#evenimente" data-campaign-promotion>
+      <span class="promotion-bar__desktop" data-campaign-promotion-desktop>🎃 Halloween la Hopa Țopa • 30 octombrie, 18:00–21:00 • Bilet 130 lei — Rezervă locul</span>
+      <span class="promotion-bar__mobile" data-campaign-promotion-mobile>🎃 Halloween • 30 oct. • 130 lei →</span>
+    </a>
   </header>
 
   <main>
@@ -152,6 +153,10 @@
             <div class="hero__ctas">
               <a href="#contact" class="btn btn--primary btn--large">
                 <span>Hai să pregătim petrecerea</span>
+                <i data-lucide="chevron-right"></i>
+              </a>
+              <a href="#evenimente" class="btn btn--secondary btn--large" data-halloween-cta>
+                <span>Vezi petrecerea de Halloween</span>
                 <i data-lucide="chevron-right"></i>
               </a>
             </div>
@@ -861,6 +866,24 @@
     (function () {
       const promotionPopup = document.querySelector('[data-promotion-popup]');
       if (!promotionPopup) return;
+
+      const halloweenEndsAt = new Date('2026-10-30T21:00:00+02:00');
+      const halloweenIsActive = new Date() <= halloweenEndsAt;
+      const campaignPromotion = document.querySelector('[data-campaign-promotion]');
+      const halloweenCta = document.querySelector('[data-halloween-cta]');
+
+      if (!halloweenIsActive) {
+        campaignPromotion.href = '#pachete';
+        campaignPromotion.querySelector('[data-campaign-promotion-desktop]').textContent = '🎉 -15% pentru petrecerile organizate Luni–Vineri — Vezi pachetele';
+        campaignPromotion.querySelector('[data-campaign-promotion-mobile]').textContent = '🎉 -15% Luni–Vineri →';
+        halloweenCta.hidden = true;
+
+        promotionPopup.setAttribute('aria-label', 'Ofertă de 15% pentru petrecerile organizate de luni până vineri');
+        promotionPopup.querySelector('[data-promotion-popup-close]').setAttribute('aria-label', 'Închide oferta');
+        const promotionImage = promotionPopup.querySelector('.promotion-popup__image');
+        promotionImage.src = 'poze/popup-reducere-petreceri-luni-vineri.jpeg?v=20260924';
+        promotionImage.alt = 'Reducere de 15% pentru petrecerile organizate de luni până vineri la Hopa Țopa Land';
+      }
 
       promotionPopup.showModal();
       promotionPopup.querySelector('[data-promotion-popup-close]').addEventListener('click', () => promotionPopup.close());
