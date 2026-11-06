@@ -852,11 +852,11 @@
     </div>
   </footer>
 
-  <dialog class="promotion-popup" data-promotion-popup aria-label="Petrecere de Halloween la Hopa Țopa Land pe 30 octombrie 2026">
+  <dialog class="promotion-popup" data-promotion-popup aria-label="Oferta Black Friday Hopa Țopa Land, reducere de 20% între 6 și 8 noiembrie 2026">
     <button class="promotion-popup__close" type="button" data-promotion-popup-close aria-label="Închide anunțul">
       <i data-lucide="x"></i>
     </button>
-    <img class="promotion-popup__image" src="poze/event-halloween-30-octombrie-2026.jpeg?v=20261025" alt="Afișul petrecerii de Halloween de la Hopa Țopa Land, 30 octombrie 2026, între orele 18:00 și 21:00">
+    <img class="promotion-popup__image" src="poze/popup-black-friday-6-8-noiembrie-2026.jpeg?v=20261106" alt="Oferta Hopa Friday: reducere de 20% la toate pachetele Hopa Țopa Land, inclusiv în weekend, între 6 și 8 noiembrie 2026">
   </dialog>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -867,10 +867,16 @@
       const promotionPopup = document.querySelector('[data-promotion-popup]');
       if (!promotionPopup) return;
 
+      const now = new Date();
       const halloweenEndsAt = new Date('2026-10-30T21:00:00+02:00');
-      const halloweenIsActive = new Date() <= halloweenEndsAt;
+      const halloweenIsActive = now <= halloweenEndsAt;
+      const blackFridayStartsAt = new Date('2026-11-06T00:00:00+02:00');
+      const blackFridayEndsAt = new Date('2026-11-08T23:59:59+02:00');
+      const blackFridayIsActive = now >= blackFridayStartsAt && now <= blackFridayEndsAt;
       const campaignPromotion = document.querySelector('[data-campaign-promotion]');
       const halloweenCta = document.querySelector('[data-halloween-cta]');
+      const popupCloseButton = promotionPopup.querySelector('[data-promotion-popup-close]');
+      const promotionImage = promotionPopup.querySelector('.promotion-popup__image');
 
       if (!halloweenIsActive) {
         campaignPromotion.classList.remove('promotion-bar--halloween');
@@ -879,9 +885,21 @@
         campaignPromotion.querySelector('[data-campaign-promotion-mobile]').textContent = '🎉 -15% Luni–Vineri →';
         halloweenCta.hidden = true;
 
+      }
+
+      if (blackFridayIsActive) {
+        promotionPopup.setAttribute('aria-label', 'Oferta Black Friday Hopa Țopa Land, reducere de 20% între 6 și 8 noiembrie 2026');
+        popupCloseButton.setAttribute('aria-label', 'Închide oferta Black Friday');
+        promotionImage.src = 'poze/popup-black-friday-6-8-noiembrie-2026.jpeg?v=20261106';
+        promotionImage.alt = 'Oferta Hopa Friday: reducere de 20% la toate pachetele Hopa Țopa Land, inclusiv în weekend, între 6 și 8 noiembrie 2026';
+      } else if (halloweenIsActive) {
+        promotionPopup.setAttribute('aria-label', 'Petrecere de Halloween la Hopa Țopa Land pe 30 octombrie 2026');
+        popupCloseButton.setAttribute('aria-label', 'Închide anunțul');
+        promotionImage.src = 'poze/event-halloween-30-octombrie-2026.jpeg?v=20261025';
+        promotionImage.alt = 'Afișul petrecerii de Halloween de la Hopa Țopa Land, 30 octombrie 2026, între orele 18:00 și 21:00';
+      } else {
         promotionPopup.setAttribute('aria-label', 'Ofertă de 15% pentru petrecerile organizate de luni până vineri');
-        promotionPopup.querySelector('[data-promotion-popup-close]').setAttribute('aria-label', 'Închide oferta');
-        const promotionImage = promotionPopup.querySelector('.promotion-popup__image');
+        popupCloseButton.setAttribute('aria-label', 'Închide oferta');
         promotionImage.src = 'poze/popup-reducere-petreceri-luni-vineri.jpeg?v=20260924';
         promotionImage.alt = 'Reducere de 15% pentru petrecerile organizate de luni până vineri la Hopa Țopa Land';
       }
