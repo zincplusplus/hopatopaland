@@ -21,7 +21,7 @@
   --sun-soft: #FDEBC2;
   --sun-dark: #A77A1A;
   --halloween-orange: #FF7A1A;
-  --halloween-black: #000000;
+  --black: #000000;
   --cream: #FFF8EE;
   --paper: #FFFFFF;
   --ink: #2E1A2A;
@@ -207,13 +207,19 @@ a:hover { color: var(--magenta-dark); text-decoration: underline; }
 }
 .promotion-bar--halloween {
   background: var(--halloween-orange);
-  color: var(--halloween-black);
+  color: var(--black);
 }
-.promotion-bar--halloween:hover { color: var(--halloween-black); }
+.promotion-bar--halloween:hover { color: var(--black); }
+.promotion-bar--black-friday {
+  background: var(--black);
+  color: var(--paper);
+}
+.promotion-bar--black-friday:hover { color: var(--paper); }
 .promotion-bar:focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: -3px;
 }
+.promotion-bar--black-friday:focus-visible { outline-color: var(--paper); }
 .promotion-bar__mobile { display: none; }
 @media (max-width: 767px) {
   .promotion-bar { font-size: var(--text-base); }
